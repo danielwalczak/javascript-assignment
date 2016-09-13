@@ -19,7 +19,17 @@ var groups = [
 ];
 
 var group = function(groups){
-  /* your code here */
+  return _.chain(groups)
+          .groupBy('confirmed')
+          .transform(function(result, value) {
+            var listOfIds = _.map(value, 'id');
+            return result.push(listOfIds);
+          }, [])
+          .map(function(group) {
+            return _.chunk(group, 2);
+          })
+          .reverse()
+          .value();
 }
 
 console.log( group(groups) );
