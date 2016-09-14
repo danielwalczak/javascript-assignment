@@ -12,8 +12,11 @@ function doubleAll(numbers) {
 }
 
 function doubleAllWithMap(numbers) {
-  return numbers
-          .map(function(number) {
-            return number * 2;
-          });
+  return numbers.map(function(number) {
+    return number * 2;
+  });
 }
+
+var numbers = [1, 2, 3];
+
+console.log(doubleAllWithMap(numbers));

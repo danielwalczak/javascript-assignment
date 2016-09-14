@@ -43,3 +43,28 @@ function checkUsersValid(validUsers) {
     });
   }
 }
+
+var goodUsers = [
+  { id: 1 },
+  { id: 2 },
+  { id: 3 }
+]
+
+// `checkUsersValid` is the function you'll define
+var testAllValid = checkUsersValid(goodUsers)
+
+var testOne = testAllValid([
+  { id: 2 },
+  { id: 1 }
+])
+// => true
+
+var testTwo = testAllValid([
+  { id: 2 },
+  { id: 4 },
+  { id: 1 }
+])
+// => false
+
+console.log('test one:', testOne);
+console.log('test two:', testTwo);

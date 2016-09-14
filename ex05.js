@@ -26,3 +26,13 @@ function getShortMessages(messages){
             return obj.message;
           });
 }
+
+var messages = [{
+  message: 'Esse id amet quis eu esse aute officia ipsum.'
+}, {
+  message: 'Esse id amet quis eu esse aute officia ipsum. Esse id amet quis eu esse aute officia ipsum.'
+}, {
+  message: 'Esse aute officia ipsum.'
+}];
+
+console.log(getShortMessages(messages));

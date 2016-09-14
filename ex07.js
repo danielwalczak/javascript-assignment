@@ -26,3 +26,7 @@ function countWords(words) {
     return acc;
   }, {});
 }
+
+var inputWords = ['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']
+
+console.log(countWords(inputWords))
