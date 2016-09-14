@@ -10,3 +10,10 @@ function doubleAll(numbers) {
   }
   return result
 }
+
+function doubleAllWithMap(numbers) {
+  return numbers
+          .map(function(number) {
+            return number * 2;
+          });
+}
