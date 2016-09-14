@@ -4,9 +4,9 @@ Given an Array of strings, use Array#reduce to create an object that contains th
 Example
 
     var inputWords = ['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']
-    
+
     console.log(countWords(inputWords))
-    
+
     // =>
     // {
     //   Apple: 2,
@@ -15,3 +15,14 @@ Example
     // }
 
 */
+
+function countWords(words) {
+  return words.reduce(function(acc, word) {
+    if(acc.hasOwnProperty(word)) {
+      acc[word] = acc[word] + 1;
+    } else {
+      acc[word] = 1;
+    }
+    return acc;
+  }, {});
+}
